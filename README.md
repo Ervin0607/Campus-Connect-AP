@@ -36,27 +36,3 @@ A comprehensive, role-based Enterprise Resource Planning (ERP) system designed f
 * **Security:** BCrypt (Password Hashing)
 
 ---
-
-## ⚙️ Installation & Setup
-
-### Prerequisites
-* **Java JDK 21** or higher
-* **MySQL Server 8.0** or higher
-* **IDE:** IntelliJ IDEA (Recommended), Eclipse, or VS Code
-
-### 1. Database Initialization
-1.  Open MySQL Workbench or your preferred SQL client.
-2.  Create a new schema named `erp_db`.
-3.  Import the initialization script provided in `/database/schema.sql`:
-    ```bash
-    mysql -u root -p erp_db < database/schema.sql
-    ```
-
-### 2. Configure Connection
-Navigate to `src/Backend/util/DB.java` and update the database credentials:
-
-```java
-// src/Backend/util/DB.java
-private static final String URL = "jdbc:mysql://localhost:3306/erp_db";
-private static final String USER = "root";       // Your MySQL Username
-private static final String PASSWORD = "password"; // Your MySQL Password
